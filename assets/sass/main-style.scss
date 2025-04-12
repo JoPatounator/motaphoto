@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+
+body {
+    background-color: $header-color-bkg; 
+}
+
+//------------------------------------------------------
