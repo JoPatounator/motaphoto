@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 300; /* Poids correspondant à Light */
+    src: url('../fonts/Poppins-Light.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-style: italic;
+    src: url('../fonts/Poppins-LightItalic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 500; /* Poids correspondant à Medium */
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/Poppins-MediumItalic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'SpaceMono';
+    font-weight: bold;
+    src: url('../fonts/SpaceMono-Bold.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'SpaceMono';
+    font-weight: bold;
+    font-style: italic;
+    src: url('../fonts/SpaceMono-BoldItalic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'SpaceMono';
+    font-style: italic;
+    src: url('../fonts/SpaceMono-Italic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'SpaceMono';
+    font-weight: normal;
+    src: url('../fonts/SpaceMono-Regular.woff2') format('woff2');
+  }
+  

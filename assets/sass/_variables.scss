@@ -1,14 +1,50 @@
-// Couleurs
+// Couleurs principales utilisées dans le site
+$couleur-noir: #000000; // Noir utilisé pour les titres et texte principal
+$couleur-blanc: #ffffff; // Blanc utilisé pour les fonds et zones claires
+$couleur-rouge: #ff0000; // Rouge utilisé pour le logo et éléments accentués
+$couleur-gris-fonce: #333333; // Gris foncé pour les sous-titres et textes secondaires
+$couleur-gris-clair: #cccccc; // Gris clair pour les bordures et séparateurs
+$couleur-transparent-noir: rgba(0, 0, 0, 0.8); // Fond semi-transparent (80%) pour la lightbox
 
-//Couleurs du header
-$header-color-bkg: #ffffff; // Fond du header
-$header-color-menu-lnk: #000000; // Couleur des liens
+// Polices
+$font-poppins: 'Poppins', sans-serif; // Police principale
+$font-spacemono: 'SpaceMono', monospace; // Police secondaire
 
-// Dimensions
-$header-height: 80px;
-$header-width: 1440px;
-$header-padding: 20px;
+// Dimensions globales
+$header-height: 80px; // Hauteur du header
+$header-width: 1440px; // Largeur maximale du header
+$header-padding: 20px; // Espacement interne du header
 
 // Typographie
-$header-font-family: 'Roboto', sans-serif;
-$header-font-size: 16px;
+$font-size-base: 16px; // Taille de base pour le texte
+$line-height-base: 1.6; // Hauteur de ligne pour une meilleure lisibilité
+
+// Header
+$header-color-bkg: $couleur-blanc; // Fond du header
+$header-color-menu-lnk: $couleur-noir; // Couleur des liens du menu
+$header-font-family: $font-poppins; // Police utilisée dans le header
+$header-font-size: $font-size-base; // Taille de police pour le header
+
+// Footer
+$footer-color-bkg: $couleur-blanc; // Fond du footer
+$footer-color-text: $couleur-noir; // Couleur du texte dans le footer
+$footer-border-color: $couleur-gris-clair; // Couleur de la bordure supérieure du footer
+
+// Lightbox
+$lightbox-overlay-color: $couleur-transparent-noir; // Fond de la lightbox
+$lightbox-text-color: $couleur-noir; // Couleur du texte dans la lightbox
+$lightbox-navigation-color: $couleur-rouge; // Couleur des icônes de navigation dans la lightbox
+
+// Boutons
+$button-primary-bg: $couleur-rouge; // Fond des boutons principaux
+$button-primary-text: $couleur-blanc; // Texte des boutons principaux
+$button-hover-bg: darken($couleur-rouge, 10%); // Fond au survol des boutons
+
+// Hover et états interactifs
+$hover-color: $couleur-rouge; // Couleur utilisée pour les effets de survol
+$active-color: darken($couleur-rouge, 20%); // Couleur utilisée pour les états actifs
+
+// Espacements
+$spacing-small: 1rem; // Petit espacement
+$spacing-medium: 2rem; // Espacement moyen
+$spacing-large: 4rem; // Grand espacement
