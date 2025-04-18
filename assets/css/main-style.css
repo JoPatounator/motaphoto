@@ -1,22 +1,43 @@
 @charset "UTF-8";
-.site-header {
-  position: relative;
+.home {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
   background-color: #ffffff;
-  padding: 20px;
 }
 
-.header-container {
+.site-header {
+  background-color: #ffffff;
+  padding: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
+.header-container {
+  background-color: #ffffff;
+  padding: 0px;
+  width: 1440px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 346px;
+}
+
+/*.header-container {
+    max-width: 1440px; // Largeur maximale du header
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
 .site-logo img {
-  width: 100%;
-  height: auto;
-  max-width: 1440px;
+  width: 216px;
+  height: 14px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -26,24 +47,28 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 45px;
 }
-.main-navigation li a {
+.main-navigation ul li a {
+  text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  font-family: "Poppins", sans-serif;
+  font-family: "SpaceMono", monospace;
   font-size: 16px;
-  font-weight: bold;
+  /*&:hover {
+      color: $survol-color; // Couleur accent (rouge)
+  }*/
 }
-.main-navigation li a:hover {
-  color: black;
+
+.logo-container {
+  padding-left: 4px;
 }
 
 .site-footer {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 0;
   text-align: center;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #000000;
 }
 
 .footer-container {
@@ -52,23 +77,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 86px;
+  margin-top: 6px;
+}
 .footer-links a {
+  text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  margin: 0 10px;
+  font-family: "SpaceMono", monospace;
+  font-size: 16px;
 }
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-.footer-copyright {
-  font-size: 0.9rem;
-  color: #333333;
-}
-
+/*.footer-copyright {
+    font-size: 0.9rem;
+    color: $couleur-gris-fonce;
+}*/
+/*.footer-navigation-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #333;
+}*/
+/*.footer-navigation {
+    text-align: center;
+}*/
+/*.footer-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}*/
+/*.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}*/
 @font-face {
   font-family: "Poppins";
   font-weight: 300; /* Poids correspondant à Light */
@@ -111,7 +162,4 @@
   font-family: "SpaceMono";
   font-weight: normal;
   src: url("../fonts/SpaceMono-Regular.woff2") format("woff2");
-}
-body {
-  background-color: #ffffff;
 }/*# sourceMappingURL=main-style.css.map */

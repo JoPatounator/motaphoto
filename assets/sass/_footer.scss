@@ -1,26 +1,35 @@
-
+//----------
 // Styles pour le footer
 .site-footer {
-    background-color: #ffffff; // Fond blanc
-    padding: 20px;
+    background-color: $footer-color-bkg; // Fond blanc
+    padding: 0;
     text-align: center;
-    border-top: 1px solid #ccc; // Ligne de séparation
+    border-top: 1px solid $footer-border-color; // Ligne de séparation
 }
 
 .footer-container {
-    max-width: 1440px;
+    max-width: $header-width; // Alignement avec le header
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: $spacing-small;
 }
 
 .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 86px;
+    margin-top: 6px;
     a {
+        text-transform: uppercase; // Transforme le texte en majuscules
         text-decoration: none;
-        color: #000000;
-        margin: 0 10px;
+        color: $footer-color-menu-lnk;
+        font-family: $footer-font-family;
+        font-size: $footer-font-size;
+
 
         &:hover {
             text-decoration: underline;
@@ -28,7 +37,28 @@
     }
 }
 
-.footer-copyright {
+/*.footer-copyright {
     font-size: 0.9rem;
-    color: #333333;
-}
+    color: $couleur-gris-fonce;
+}*/
+
+/*.footer-navigation-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #333;
+}*/
+
+/*.footer-navigation {
+    text-align: center;
+}*/
+
+/*.footer-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}*/
+
+/*.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}*/

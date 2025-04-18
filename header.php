@@ -1,44 +1,50 @@
 <?php
+
 /**
- * The header for our theme
+ * The template for displaying the header
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * Displays all of the head elements and the navigation menu.
  *
  * @package motaphoto
  */
 
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'motaphoto' ); ?></a>
+    <header id="site-header" class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+             <div class="logo-container">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
+                    <img src="http://localhost/motaphoto/wp-content/uploads/2025/04/logo-nathalie-mota.png" alt="Nathalie Mota" class="logo-image">
+                </a>
+            </div>
+            <!-- Menu de navigation -->
+            <div class="navigation-container">
+                <nav class="main-navigation" role="navigation" aria-label="<?php _e('Menu principal', 'text-domain'); ?>">
+                    <?php
+                    /* Affiche le menu "Menu principal" enregistré dans le functions.php */
+                    wp_nav_menu([
+                        'theme_location' => 'main-menu',
+                        'container' => false,  // On retire le conteneur généré par WP
+                        'walker' => new Ally_Walker_Nav_Menu()
+                    ]);
+                    ?>
+                </nav>
+            </div>
+        </div><!-- .header-container -->
+    </header><!-- #site-header -->
 
-	<header class="site-header">
-    <div class="header-container">
-        <!-- Logo -->
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/2025/04/logo-nathalie-mota.png" alt="Logo de Nathalie Mota" class="logo-image">
-        </a>
-
-        <!-- Menu de navigation -->
-        <nav class="main-navigation">
-            <ul class="menu">
-                <li><a href="#accueil">ACCUEIL</a></li>
-                <li><a href="#a-propos">À PROPOS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <?php
+    // Reste du contenu du site
+    ?>
