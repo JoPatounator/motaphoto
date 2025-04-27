@@ -6,9 +6,21 @@ $couleur-gris-fonce: #333333; // Gris fonce pour les sous-titres et textes secon
 $couleur-gris-clair: #cccccc; // Gris clair pour les bordures et séparateurs
 $couleur-transparent-noir: rgba(0, 0, 0, 0.8); // Fond semi-transparent (80%) pour la lightbox
 
+
+
 // Polices
-$font-poppins: 'Poppins', sans-serif; // Police principale
-$font-spacemono: 'SpaceMono', monospace; // Police secondaire
+$font-poppins: 'Poppins', sans-serif; 
+$font-spacemono: 'SpaceMono', monospace; 
+
+// Typographie
+$font-size-base: 16px; // Taille de base pour le texte
+$line-height-base: 1.6; // Hauteur de ligne 
+$titre-H1-font-size: 96px;
+$titre-H1-line-height: 100%;
+$titre-H1-letter-spacing: 0%;
+$titre-H1-transform: uppercase;
+$titre-H1-weight: 700;
+$titre-H1-style: italic;
 
 
 // Dimensions globales
@@ -16,15 +28,19 @@ $header-height: 80px; // Hauteur du header
 $header-width: 1440px; // Largeur maximale du header
 $header-padding: 0px; // Espacement interne du header
 
-// Typographie
-$font-size-base: 16px; // Taille de base pour le texte
-$line-height-base: 1.6; // Hauteur de ligne 
+
 
 // Header
 $header-color-bkg: $couleur-blanc; // Fond du header
 $header-color-menu-lnk: $couleur-noir; // Couleur des liens du menu
 $header-font-family: $font-spacemono; // Police utilisee dans le header
 $header-font-size: $font-size-base; // Taille de police pour le header
+
+// Mise en forme Page d'accueil page-accueil.php
+$padding-desktop: 40px; // Espacement pour écrans desktop
+$page-background:$couleur-blanc;
+$page-background: $couleur-blanc;
+
 
 // Footer
 $footer-color-bkg: $couleur-blanc; // Fond du footer
@@ -34,22 +50,13 @@ $footer-border-color: $couleur-noir; // Couleur de la bordure supérieure du foo
 $footer-font-family: $font-spacemono; // Police utilisée dans le footer
 $footer-font-size: $font-size-base; // Taille de police pour le footer
 
+// Bordures
+$color-border:$couleur-blanc;
 
-// Lightbox
-$lightbox-overlay-color: $couleur-transparent-noir; // Fond de la lightbox
-$lightbox-text-color: $couleur-noir; // Couleur du texte dans la lightbox
-$lightbox-navigation-color: $couleur-rouge; // Couleur des icones de navigation dans la lightbox
 
-// Boutons
-$button-primary-bg: $couleur-rouge; // Fond des boutons principaux
-$button-primary-text: $couleur-blanc; // Texte des boutons principaux
-$button-hover-bg: darken($couleur-rouge, 10%); // Fond au survol des boutons
-
-// Hover et états interactifs
-$hover-color: $couleur-rouge; // Couleur utilisee pour les effets de survol
-$active-color: darken($couleur-rouge, 20%); // Couleur utilisee pour les états actifs
 
 // Espacements
-$spacing-small: 1rem; // Petit espacement
-$spacing-medium: 2rem; // Espacement moyen
-$spacing-large: 4rem; // Grand espacement
+$spacing-small: 16px; // Petit espacement
+$spacing-medium: 32px; // Espacement moyen
+$spacing-large: 64px; // Grand espacement
+

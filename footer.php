@@ -16,13 +16,9 @@
         <!-- Liens du footer -->
         <div class="footer-links">
             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Mentions légales'))); ?>">Mentions légales</a>
-            <a href="<?php echo esc_url(get_privacy_policy_url()); ?>">Vie privée</a>
+            <a href="<?php echo esc_url(get_privacy_policy_url('#')); ?>">Vie privée</a>
             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tous droits réservés'))); ?>">Tous droits réservés</a>
         </div>
-        
-
-        <!-- Modale de contact -->
-        <?php get_template_part('template-parts/modal-contact'); ?>
     </div><!-- .footer-container -->
 </footer><!-- #colophon -->
 

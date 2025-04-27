@@ -7,12 +7,8 @@
 if (!defined('WPINC')) {
     die;
 }*/
-
-// =====================================
-// 1. CONFIGURATION DE BASE DU THÈME
-// =====================================
     
-// Enregistre les menus
+// Enregistrement des menus
 function register_my_menu() {
     register_nav_menu( 'main-menu', __( 'Menu principal', 'text-domain' ) );
 }
@@ -20,9 +16,10 @@ add_action( 'after_setup_theme', 'register_my_menu' );
 
 
 
-// =====================================
-// 2. CHARGEMENT DES STYLES ET SCRIPTS
-// =====================================
+//-------------------------------------
+// Chargement styles et scripts
+//-------------------------------------
+
 function motaphoto_enqueue_assets() {
     $theme_version = wp_get_theme()->get('Version');
     
@@ -48,5 +45,22 @@ add_action('wp_enqueue_scripts', 'motaphoto_enqueue_assets');
 
 require_once get_template_directory() . '/menus.php'; // Chargement du walker "Ally_Walker_Nav_Menu" contenu dans le fichier "menus.php"
 
+// Gestion de la photo du Hero-Header
 
+/*function motaphoto_hero_header() {
+    $hero_image = get_template_directory_uri() . '/assets/images/hero-header.jpeg';
+    echo '<div class="hero-header-image">';
+    echo '<img src="' . esc_url($hero_image) . '" alt="Hero Header Image">';
+    echo '</div>';
+}*/
 
+function motaphoto_hero_header() {
+    // Définir le chemin vers l'image (si nécessaire)
+    $hero_image = get_template_directory_uri() . '/assets/images/hero-header.jpeg';
+
+    // Passer la variable $hero_image au template part via une variable globale ou set_query_var()
+    set_query_var('hero_image', $hero_image);
+
+    // Appeler le template part
+    get_template_part('template-parts/motaphoto', 'hero-header');
+}

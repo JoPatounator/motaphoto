@@ -1,0 +1,43 @@
+// Conteneur principal pour centrer le contenu
+.site-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 80vh; 
+    background-color: $page-background;
+    text-align: center;
+
+    .entry-content {
+        width:100%;
+        min-width: 50vh;
+        font-size: 1.2rem; /* Taille de police */
+        line-height: 1.6; /* Hauteur de ligne */
+        color: #333; /* Couleur du texte */
+    
+        img {
+            max-width: 100%; /* Images responsives */
+            height: auto;
+        }
+    
+        p {
+            margin-bottom: 20px; /* Espace entre les paragraphes */
+        }
+    }
+
+
+}
+
+.hero-header-image {
+    text-align: center; // Centre l'image horizontalement
+    margin-bottom: 40px; // Espace sous l'image
+    width: 1440px;
+
+
+    img {
+        max-width: 100%; // Assure que l'image est responsive
+        height: auto;
+        object-fit: cover;
+    }
+}
+

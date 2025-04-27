@@ -1,0 +1,17 @@
+// Styles typographiques généraux
+h1,
+h2,
+h3 {
+    font-family: $font-spacemono;
+    font-weight: $titre-H1-weight;
+    font-style: $titre-H1-style;
+    text-transform: $titre-H1-transform;
+    letter-spacing: $titre-H1-letter-spacing;
+}
+
+// Styles spécifiques pour H1
+h1 {
+    font-size: $titre-H1-font-size;
+    line-height: $titre-H1-line-height;
+    vertical-align: middle;
+}

@@ -29,6 +29,12 @@
                     <img src="http://localhost/motaphoto/wp-content/uploads/2025/04/logo-nathalie-mota.png" alt="Nathalie Mota" class="logo-image">
                 </a>
             </div>
+
+            <!-- Titre Herader -->
+            <div class="header-title-container">
+                <h1 class="header-title">PHOTOGRAPHE EVENT</h1>
+            </div>
+
             <!-- Menu de navigation -->
             <div class="navigation-container">
                 <nav class="main-navigation" role="navigation" aria-label="<?php _e('Menu principal', 'text-domain'); ?>">
