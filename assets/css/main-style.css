@@ -58,6 +58,16 @@ h1 {
   vertical-align: middle;
 }
 
+.form-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .home {
   max-width: 1440px;
   margin: 0 auto;
@@ -227,4 +237,188 @@ h1 {
 /*.footer-menu a {
     color: #fff;
     text-decoration: none;
+}*/
+/* Supprime la mise en forme par défaut 
+.wpcf7-form-control-wrap {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+// Masque le conteneur si nécessaire
+.wpcf7-form-control-wrap {
+    display: contents; // Maintient les champs sans conteneur additionnel 
+}
+
+
+.zone-type-1{
+    width: 263px;
+    height: 63px;
+    .form-label{
+        height:18px;
+    }
+}
+
+.zone-type-2{
+    width: 263px;
+    height: 233px;
+    .form-label{
+        height:18px;
+    }
+}
+
+.bouton-submit{
+    width: 263px;
+    height: 50px;
+    .form-submit{
+        height: 50px;
+    }
+}*/
+/*.wpcf7 p {
+    display: contents; // Supprime toute mise en forme des <p> 
+      }*/
+#wpcf7-f6-o1 {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+}
+#wpcf7-f6-o1 .wpcf7-text {
+  width: 257px;
+  height: 34px;
+}
+#wpcf7-f6-o1 .wpcf7-textarea {
+  width: 257px;
+  height: 227px;
+}
+#wpcf7-f6-o1 .wpcf7-submit {
+  width: 263px;
+  height: 50px;
+}
+#wpcf7-f6-o1 .zone-form-type-1 {
+  height: 63px;
+}
+#wpcf7-f6-o1 .form-label {
+  display: block; /* Force le label à être sur une ligne distincte */
+  margin-bottom: 5px; /* Espacement entre le label et le champ */
+}
+.hidden {
+  display: none !important;
+}
+
+.modale-container {
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modale {
+  margin: auto;
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  width: 594px;
+  max-width: 594px;
+  height: auto;
+  padding: 20px;
+  border: 2px solid #000000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-out;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+/*.modale {
+    margin: auto;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    max-width: 769px;
+    height: 100%;
+    border: 2px solid #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.);
+    animation: fadeIn 2s ease-out;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*.modale::before {
+  content: "CONTACT"; // Texte répété en arrière-plan
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px; // Police très grande
+  font-weight: bold;
+  font-style: italic; // Italique comme dans la maquette
+  color: rgba(0, 0, 0, 0.1); // Texte semi-transparent
+  z-index: -1; // Derrière le contenu de la modale
+}*/
+.modal-header {
+  margin-top: 50px;
+  background: url("../../assets/images/contact-header-desktop.png") no-repeat center center;
+  background-size: cover;
+  height: 106px;
+}
+
+.modal-body {
+  margin-top: 29px;
+  display: flex;
+  justify-content: center;
+}
+
+/*.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal-body button {
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal-body button:hover {
+  background-color: #4cae4c; // Légèrement plus sombre au survol
+}
+
+// Pied de la modale
+.modal-footer {
+  //padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  //border-top: 2px solid #000; // Bordure noire en haut
 }*//*# sourceMappingURL=main-style.css.map */

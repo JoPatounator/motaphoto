@@ -35,9 +35,18 @@ function motaphoto_enqueue_assets() {
     // Scripts JavaScript
     wp_enqueue_script(
         'motaphoto-scripts',
-        get_template_directory_uri() . '/js/scripts.js',
+        get_template_directory_uri() . '/assets/js/script.js',
         array('jquery'), // Dépendance de jQuery
         $theme_version,
+        true // Chargement en footer
+    );
+
+    // Script modale-contact.js
+    wp_enqueue_script(
+        'modale-contact', 
+        get_template_directory_uri() . '/assets/js/modale-contact.js', 
+        array('jquery'), // Assure que jQuery est chargé avant
+        $theme_version, 
         true // Chargement en footer
     );
 }
@@ -64,3 +73,17 @@ function motaphoto_hero_header() {
     // Appeler le template part
     get_template_part('template-parts/motaphoto', 'hero-header');
 }
+
+//-------------------------------------------------------- Paramétrage de la fenetre modale ------------------------------------------------------
+
+// Formulaire fenetre modale
+// Désactiver l'enveloppement automatique par des balises <p> dans Contact Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+function ajout_class_contact_link($atts, $item, $args) {
+    if ($item->title === 'Contact') {
+        $atts['class'] = 'open-modal';
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'ajout_class_contact_link', 10, 3);

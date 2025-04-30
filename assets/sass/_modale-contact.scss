@@ -1,0 +1,144 @@
+// Styles de la modale
+
+.hidden {
+    display: none !important;
+}
+
+.modale-container {
+    margin:0 auto;
+    //display: none !important; // Masquée par défaut
+    //display: none; // Masquée par défaut
+    position: fixed; // Fixe la modale par rapport à la fenêtre
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 1000; // Au-dessus des autres éléments
+    //background-color: rgba(0, 0, 0, 0.5); // Fond noir transparent (80%)
+    display: flex;
+    justify-content: center;
+    align-items: center; // Centrer la modale horizontalement et verticalement
+    //border-width: 2px;
+    //border-style: solid;
+    //border-color : $couleur-noir;
+}
+  
+  
+  // Contenu de la modale
+  .modale {
+    margin:auto;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    width: 594px;
+    max-width: 594px;
+    height: auto;
+    padding: 20px;
+    border: 2px solid $couleur-noir;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-out;
+    //overflow: hidden;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    //align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/*.modale {
+    margin: auto;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    max-width: 769px;
+    height: 100%;
+    border: 2px solid #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.);
+    animation: fadeIn 2s ease-out;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}*/
+  
+  // Animation d'apparition
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); // Départ légèrement au-dessus
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); // Arrivé en position normale
+    }
+  }
+  
+  // Fond "CONTACT" répété
+  /*.modale::before {
+    content: "CONTACT"; // Texte répété en arrière-plan
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px; // Police très grande
+    font-weight: bold;
+    font-style: italic; // Italique comme dans la maquette
+    color: rgba(0, 0, 0, 0.1); // Texte semi-transparent
+    z-index: -1; // Derrière le contenu de la modale
+  }*/
+  
+  // En-tête de la modale
+  .modal-header {
+    margin-top: 50px;
+    background: url('../../assets/images/contact-header-desktop.png') no-repeat center center; // Image en-tête
+    background-size: cover; // Ajustement automatique
+    height: 106px; // Hauteur de l'en-tête
+    //text-align: center;
+  }
+
+  
+  // Corps de la modale
+  .modal-body {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  // Champs du formulaire
+  /*.modal-body input,
+  .modal-body textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .modal-body button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .modal-body button:hover {
+    background-color: #4cae4c; // Légèrement plus sombre au survol
+  }
+  
+  // Pied de la modale
+  .modal-footer {
+    //padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    //border-top: 2px solid #000; // Bordure noire en haut
+  }*/
+  

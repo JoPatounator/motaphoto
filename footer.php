@@ -22,6 +22,9 @@
     </div><!-- .footer-container -->
 </footer><!-- #colophon -->
 
+<!-- Appel du fichier modale test -->
+<?php get_template_part('template-parts/modale-contact', 'contact'); ?>
+
 <!-- Scripts JavaScript -->
 <?php wp_footer(); ?>
 </body>
