@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault(); // desactive comportement par défaut du lien
             event.stopPropagation(); // desactive la propagation de l'événement vers la fenêtre
             modaleContainer.classList.remove('hidden'); // Affiche la modale
+            // Ajoute une classe pour déclencher l'animation
+            modaleContainer.querySelector('.modale').classList.add('animate-modal');
             console.info('On a cliqué sur le lien Contact');
         });
     });
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Vérification si element clique n'est ni un descendant de .modale-container ni un descendant de .modale
         if (!modaleContainer.contains(event.target) || !modale.contains(event.target)) {
+            modale.classList.remove('animate-modal', 'closing'); // Ajoute une animation de sortie avant de masquer
             modaleContainer.classList.add('hidden'); // Masque la modale
             console.info('On a fermé la modale en cliquant en dehors');
         }

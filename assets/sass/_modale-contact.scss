@@ -15,37 +15,43 @@
   display: flex;
   justify-content: center;
   align-items: center; // Centrer la modale horizontalement et verticalement
+
+  .modale {
+    margin:auto;
+    width: 597px; 
+    height: 769px; 
+    border: 5px solid black; 
+    box-sizing: border-box; 
+    background-color: $couleur-blanc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    animation: modalFadeIn 0.5s ease-out; // Utilise l'animation du fichier _animations.scss
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform-origin: center center; // Point de départ de l'animation
+    
+      // En-tête de la modale
+      .modal-header {
+        margin-top: 13px;
+        background: url('../../assets/images/contact-header-desktop.png') no-repeat center center; // Image en-tête
+        background-size: cover; // Ajustement automatique
+        height: 106px; // Hauteur de l'en-tête
+      }
+  
+      .modal-body {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 50px auto 0;
+        box-sizing: border-box;
+        justify-content: center;
+      }
+  }
 }
 
-.modale {
-  margin:auto;
-  width: 597px; 
-  height: 769px; 
-  border: 5px solid black; 
-  box-sizing: border-box; 
-  background-color: $couleur-blanc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
 
-// En-tête de la modale
-.modal-header {
-  margin-top: 13px;
-  background: url('../../assets/images/contact-header-desktop.png') no-repeat center center; // Image en-tête
-  background-size: cover; // Ajustement automatique
-  height: 106px; // Hauteur de l'en-tête
-}
 
-.modal-body {
-  display: flex;
-  position: relative;
-  width: 100%;
-  margin: 50px auto 0;
-  box-sizing: border-box;
-  justify-content: center;
-}
 
 // Animation d'apparition
 @keyframes fadeIn {

@@ -276,6 +276,30 @@ h1 {
   display: block;
   margin-bottom: 5px;
 }
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+}
+.animate-modal {
+  animation: modalFadeIn 1s ease-out;
+}
+
 .hidden {
   display: none !important;
 }
@@ -292,8 +316,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
-.modale {
+.modale-container .modale {
   margin: auto;
   width: 597px;
   height: 769px;
@@ -304,16 +327,17 @@ h1 {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  animation: modalFadeIn 0.5s ease-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform-origin: center center;
 }
-
-.modal-header {
+.modale-container .modale .modal-header {
   margin-top: 13px;
   background: url("../../assets/images/contact-header-desktop.png") no-repeat center center;
   background-size: cover;
   height: 106px;
 }
-
-.modal-body {
+.modale-container .modale .modal-body {
   display: flex;
   position: relative;
   width: 100%;
