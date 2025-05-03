@@ -1,9 +1,14 @@
 // Couleurs principales utilisées dans le site
 $couleur-noir: #000000; // Noir utilisé pour les titres et texte principal
 $couleur-blanc: #ffffff; // Blanc utilise pour les fonds et zones claires
-$couleur-rouge: #ff0000; // Rouge utilisé pour le logo et éléments accentues
-$couleur-gris-fonce: #333333; // Gris fonce pour les sous-titres et textes secondaires
-$couleur-gris-clair: #cccccc; // Gris clair pour les bordures et séparateurs
+$couleur-rouge: #E00000; // Rouge utilisé pour le logo et éléments accentues
+$couleur-rouge-secondaire:#FE5858;
+$couleur-rouge-tertiaire:#FFD6D6;
+$couleur-bleu-fonce:#313144;
+$couleur-gris-fonce: #C4C4C4; // Gris fonce 
+$couleur-gris-medium:#D8D8D8; // Gris medium
+$couleur-gris-light: #E5E5E5; // Gris light 
+$couleur-gris-clair:#B8BBC2 ;//pour les bordures du formulaire
 $couleur-transparent-noir: rgba(0, 0, 0, 0.8); // Fond semi-transparent (80%) pour la lightbox
 
 
