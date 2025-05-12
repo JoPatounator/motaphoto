@@ -1,19 +1,32 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     // Sélectionne les éléments nécessaires
+    const isSinglePhoto = document.body.classList.contains('single-photo');  // Vérifier si nous sommes sur une page de photo individuelle
     const modaleContainer = document.getElementById('modale-container');
     const modale = document.getElementById('modale'); 
     const openModalLinks = document.querySelectorAll('.open-modal');
+    //console.info(document.body.classList.toString);
 
     console.info('Variables modaleContainer et openModalLinks initialisées');
 
+
+
+    if (isSinglePhoto) {
+        console.info(`!!!!!!!!!! On est dans un element single photo !!!!!!!!!!!!`);
+
+        const refPhoto = photoData.ref; // Récupère la valeur depuis PHP
+        const refField = document.getElementById('your-subject');
+        refField.value = refPhoto;
+        console.info(`Injection reference photo: ${refPhoto} dans le formulaire`);
+
+    }
     // Ouvrir la modale lorsque "Contact" est clique
     openModalLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault(); // desactive comportement par défaut du lien
             event.stopPropagation(); // desactive la propagation de l'événement vers la fenêtre
             modaleContainer.classList.remove('hidden'); // Affiche la modale
-            // Ajoute une classe pour déclencher l'animation
+            // Ajout classe pour animation
             modaleContainer.querySelector('.modale').classList.add('animate-modal');
             console.info('On a cliqué sur le lien Contact');
         });

@@ -1,0 +1,113 @@
+/* Adaptation desktop */
+
+.single-photo{
+    max-width: 1440px;
+    margin:0 auto;
+}
+
+
+.main-single-photo {
+    max-width: 1440px;
+    display: flex;
+    margin:38px auto;
+    justify-content: center;
+
+
+    .article-photo{
+        flex: 1;                     // L'article prend toute la hauteur restante
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+  
+
+    .bloc-info-image {
+        width: 1130px;
+        flex: 1;
+        display: flex;
+        //flex-wrap: wrap; // Permet au contenu de se répartir proprement sur plusieurs lignes en cas de besoin
+        justify-content: space-between;
+        max-width: 1130px;
+        margin: 0 auto;
+        gap: 20px;
+
+        .infos-contenu-photo{
+            flex: 0 0 50%; // Chaque section occupe 50% de la largeur
+            max-width: 50%;
+            border-bottom: 1px solid black;
+            margin-bottom: 4px;
+        }
+
+        .image-contenu-photo {
+        flex: 0 0 50%; // Chaque section occupe 50% de la largeur
+        max-width: 50%;
+
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        }
+
+        
+    }
+
+    /*.infos-contenu-photo{
+        display:flex;
+
+    }*/
+
+    .photo-info-container{
+        //width: 420px;
+        width: 22vw;
+        height: 100%;
+        display:flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin-top: -20px;
+
+        .photo-title{
+            margin-top: 0px;
+            margin-bottom: 10px;     
+        }
+
+        .meta-data {
+            display: flex;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            flex-direction: column;
+          
+            a {
+              text-decoration: none; // Enlève le soulignement
+              color: inherit;        // Hérite de la couleur du parent
+              pointer-events: none;  // Désactive l'interaction au clic (optionnel)
+            }
+          }
+          
+    }
+    
+   
+
+}
+  .photo-image-container img {
+    width: 100%;
+    height: 91vh;
+    object-fit: cover;
+  }
+  
+
+
+  /* Responsive mobile */
+  /*@media (max-width: 768px) {
+    .main-single-photo {
+      grid-template-columns: 1fr;
+    }
+    
+    .photo-image-container img {
+        display:grid;
+        height: auto;
+    }
+  }*/

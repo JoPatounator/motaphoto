@@ -42,15 +42,53 @@ function motaphoto_enqueue_assets() {
     );
 
     // Script modale-contact.js
-    wp_enqueue_script(
+    /*wp_enqueue_script(
         'modale-contact', 
         get_template_directory_uri() . '/assets/js/modale-contact.js', 
         array('jquery'), // Assure que jQuery est chargé avant
         $theme_version, 
         true // Chargement en footer
-    );
+    );*/
 }
 add_action('wp_enqueue_scripts', 'motaphoto_enqueue_assets');
+
+/*function enqueue_modale_scripts() {
+    // Enqueue le script principal
+    wp_enqueue_script( 'modale-contact-js', get_template_directory_uri() . '/assets/js/modale-contact.js', array('jquery'), null, true );
+
+    // Passer la référence uniquement si c'est une page de photo
+    if ( is_singular('photo') ) {
+        $photo_ref = get_field('reference');
+        wp_localize_script( 'modale-contact-js', 'photoData', array(
+            'ref' => $photo_ref
+        ));
+    }
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_modale_scripts' );*/
+
+//---------------------------------------------------------------------------------------------
+
+function enqueue_modale_scripts() {
+    // Enqueue le script principal
+    wp_enqueue_script( 
+        'modale-contact-js', 
+        get_theme_file_uri('/assets/js/modale-contact.js'), 
+        array('jquery'), 
+        null, 
+        true 
+    );
+
+    if ( is_singular('photo') ) {
+        $photo_ref = get_field('reference');
+        wp_localize_script( 
+            'modale-contact-js', 
+            'photoData', 
+            array( 'ref' => $photo_ref ) 
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_modale_scripts' );
+//---------------------------------------------------------------------------------------------
 
 require_once get_template_directory() . '/menus.php'; // Chargement du walker "Ally_Walker_Nav_Menu" contenu dans le fichier "menus.php"
 

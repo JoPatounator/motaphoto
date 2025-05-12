@@ -20,12 +20,30 @@ $font-spacemono: 'SpaceMono', monospace;
 // Typographie
 $font-size-base: 16px; // Taille de base pour le texte
 $line-height-base: 1.6; // Hauteur de ligne 
+$titre-HX-transform: uppercase;
+$titre-HX-vertical-align:middle;
+//----------------------------------------- H1 ------------------------------------------
 $titre-H1-font-size: 96px;
 $titre-H1-line-height: 100%;
 $titre-H1-letter-spacing: 0%;
-$titre-H1-transform: uppercase;
 $titre-H1-weight: 700;
 $titre-H1-style: italic;
+
+//----------------------------------------- H2 ------------------------------------------
+$titre-H2-font-size: 66px;
+$titre-H2-line-height: 58px;
+$titre-H2-letter-spacing: 0%;
+$titre-H2-weight: 400;
+$titre-H2-style: italic;
+
+
+//----------------------------------------- H3 ------------------------------------------
+$titre-H3-font-size: 18px;
+$titre-H3-line-height: 100%;
+$titre-H3-letter-spacing: 0.1em;
+$titre-H3-weight: 400;
+$titre-H3-style: italic;
+
 
 
 // Dimensions globales

@@ -1,0 +1,74 @@
+ // Bloc bas : contact et navigation
+.navigation-bouton-photo {
+        width: 60.8vw;
+        height: 12.8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+
+        .container-navigation-bouton-photo{
+            width: 100vw;
+            height: 17.8vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+
+            .bloc-interaction-gauche{
+                margin:0px;
+                display:flex;
+                gap:107px;
+                
+
+                .contact-button{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin:0px;
+
+                    #bouton-photo{
+                        width:281px;
+                        height:50px;
+                    }
+                }
+
+                .question-contact-bouton{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 21px;
+                }
+
+            }
+
+            .bloc-interaction-droit{
+                margin-top: -11px;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+
+                .fleches-navigation-photos{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+
+                    a{
+                        text-decoration: none;
+                    }
+                }
+
+                .image-navigation-photo{
+                    margin-bottom: 6px;
+
+                    img{
+                        width:81px;
+                        height:71px;
+                    }
+                }
+            }
+        }     
+}
+    

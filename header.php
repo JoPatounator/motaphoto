@@ -20,7 +20,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( $single_photo_class ); ?>>
     <header id="site-header" class="site-header">
         <div class="header-container">
             <!-- Logo -->
@@ -31,9 +31,13 @@
             </div>
 
             <!-- Titre Herader -->
+            <!-- Dans header.php -->
             <div class="header-title-container">
-                <h1 class="header-title">PHOTOGRAPHE EVENT</h1>
+                <?php if ( is_front_page() || is_home() ) : ?>
+                    <h1 class="header-title">PHOTOGRAPHE EVENT</h1>
+                <?php endif; ?>
             </div>
+        
 
             <!-- Menu de navigation -->
             <div class="navigation-container">
