@@ -1,0 +1,35 @@
+.photos-apparentees {
+    margin-top: 24px;
+    .titre-photos-apparentees{
+        margin-top:55px;
+        margin-left:10px;
+    }
+  }
+
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .photo-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .bloc-photo-liste {
+    width: 100%;
+    overflow: hidden;
+    //border-radius: 8px;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bloc-photo-liste img {
+    width: 564px;
+    height: 495px;
+    object-fit: cover;
+  }
+

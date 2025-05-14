@@ -14,16 +14,16 @@
         $prev = get_previous_post();
         $next = get_next_post();
         ?>
-        <?php if ($prev) : ?>
+        
             <a href="<?php echo get_permalink($prev); ?>" class="prev">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-gauche.png" alt="Précédente">
             </a>
-        <?php endif; ?>
-        <?php if ($next) : ?>
+        
+        
             <a href="<?php echo get_permalink($next); ?>" class="next">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-droite.png" alt="Suivante">
             </a>
-        <?php endif; ?>
+        
     </div>
     <div class="image-navigation-photo">
       <?php if ( has_post_thumbnail() ) : ?>

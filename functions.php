@@ -27,7 +27,7 @@ function motaphoto_enqueue_assets() {
     wp_enqueue_style('motaphoto-main-style', get_template_directory_uri() . '/assets/css/main-style.css', array(), $theme_version
     );
 
-    // Fichier style.css requis par WordPress (métadonnées uniquement)
+    // Fichier style.css 
     wp_enqueue_style(
         'motaphoto-theme-style', get_stylesheet_uri(), array('motaphoto-main-style'), filemtime(get_template_directory() . '/style.css') 
     );
@@ -41,30 +41,9 @@ function motaphoto_enqueue_assets() {
         true // Chargement en footer
     );
 
-    // Script modale-contact.js
-    /*wp_enqueue_script(
-        'modale-contact', 
-        get_template_directory_uri() . '/assets/js/modale-contact.js', 
-        array('jquery'), // Assure que jQuery est chargé avant
-        $theme_version, 
-        true // Chargement en footer
-    );*/
 }
 add_action('wp_enqueue_scripts', 'motaphoto_enqueue_assets');
 
-/*function enqueue_modale_scripts() {
-    // Enqueue le script principal
-    wp_enqueue_script( 'modale-contact-js', get_template_directory_uri() . '/assets/js/modale-contact.js', array('jquery'), null, true );
-
-    // Passer la référence uniquement si c'est une page de photo
-    if ( is_singular('photo') ) {
-        $photo_ref = get_field('reference');
-        wp_localize_script( 'modale-contact-js', 'photoData', array(
-            'ref' => $photo_ref
-        ));
-    }
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_modale_scripts' );*/
 
 //---------------------------------------------------------------------------------------------
 
@@ -92,24 +71,37 @@ add_action( 'wp_enqueue_scripts', 'enqueue_modale_scripts' );
 
 require_once get_template_directory() . '/menus.php'; // Chargement du walker "Ally_Walker_Nav_Menu" contenu dans le fichier "menus.php"
 
+
+
 // Gestion de la photo du Hero-Header
 
-/*function motaphoto_hero_header() {
-    $hero_image = get_template_directory_uri() . '/assets/images/hero-header.jpeg';
-    echo '<div class="hero-header-image">';
-    echo '<img src="' . esc_url($hero_image) . '" alt="Hero Header Image">';
-    echo '</div>';
-}*/
-
 function motaphoto_hero_header() {
-    // Définir le chemin vers l'image (si nécessaire)
-    $hero_image = get_template_directory_uri() . '/assets/images/hero-header.jpeg';
+    // Selection un post aléatoire de type "photo"
+    $args = array(
+        'post_type'      => 'photo',
+        'posts_per_page' => 1,
+        'orderby'        => 'rand', 
+    );
 
-    // Passer la variable $hero_image au template part via une variable globale ou set_query_var()
+    $random_photo = new WP_Query($args);
+
+    // Test si post existe et recup URL
+    if ($random_photo->have_posts()) {
+        while ($random_photo->have_posts()) {
+            $random_photo->the_post();
+            $hero_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); // chargement de la variable avec url. 'full' taille originale
+        }
+        wp_reset_postdata(); // reset la requête WP
+    } else {
+        // Image par défaut si aucun post n'est trouvé
+        $hero_image = get_template_directory_uri() . '/assets/images/hero-header.jpeg';
+    }
+
+    // transmision de la var au template part via set_query_var
     set_query_var('hero_image', $hero_image);
 
-    // Appeler le template part
-    get_template_part('template-parts/motaphoto', 'hero-header');
+    // Appel du template pa rt
+    get_template_part('template-parts/motaphoto-hero-header', 'hero-header');
 }
 
 //-------------------------------------------------------- Paramétrage de la fenetre modale ------------------------------------------------------

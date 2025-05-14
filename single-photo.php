@@ -26,7 +26,8 @@ get_header(); ?>
       </section>
       
       <!-- Photos apparentées -->
-      <section class="photos-apparentees">
+      <section class="photos-apparentees">    
+      <Div class= "titre-photos-apparentees"><h3>VOUS AIMEREZ AUSSI</h3></Div>
         <?php get_template_part( 'template-parts/photos-apparentees', 'photos-apparentees' ); ?>
       </section>
       
