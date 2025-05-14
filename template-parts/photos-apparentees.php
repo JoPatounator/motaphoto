@@ -1,6 +1,6 @@
 <div class="photos-apparentees">
   <?php
-  $terms = get_the_terms(get_the_ID(), 'categorie');
+  $terms = get_the_terms(get_the_ID(), 'categorie'); // recup  termes de taxonomie 'categorie' du post actuel
   if ($terms && !is_wp_error($terms)) {
       $current_category = $terms[0]->term_id;
       $args = array(
@@ -15,12 +15,12 @@
           'posts_per_page' => 5,
           'post__not_in' => array(get_the_ID()), // Exclure la photo actuelle
       );
-      $related_photos = new WP_Query($args);
+      $photos_apparentees = new WP_Query($args);
   ?>
   
-  <?php if ($related_photos->have_posts()) : ?>
+  <?php if ($photos_apparentees->have_posts()) : ?>
     <div class="photo-grid">
-      <?php while ($related_photos->have_posts()) : $related_photos->the_post(); ?>
+      <?php while ($photos_apparentees->have_posts()) : $photos_apparentees->the_post(); ?>
         <?php get_template_part( 'template-parts/bloc-photo-liste', 'bloc-photo-liste' ); ?>
       <?php endwhile; ?>
     </div>
