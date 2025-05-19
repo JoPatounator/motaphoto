@@ -74,6 +74,16 @@
       transform: scale(1.1);
     }
   }
+
+  .photo-grid .bloc-photo-liste {
+  display: none;
+}
+
+.photo-grid .bloc-photo-liste:nth-child(1),
+.photo-grid .bloc-photo-liste:nth-child(2) {
+  display: block;
+}
+
   
   
 

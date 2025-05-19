@@ -12,7 +12,7 @@
                   'terms' => $current_category,
               ),
           ),
-          'posts_per_page' => 2,
+          'posts_per_page' => -1,
           'post__not_in' => array(get_the_ID()), // Exclure la photo actuelle
       );
       $photos_apparentees = new WP_Query($args);
