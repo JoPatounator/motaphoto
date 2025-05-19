@@ -9,26 +9,28 @@
   </div>
 
   <div class="bloc-interaction-droit">
-    <div class="fleches-navigation-photos">
-        <?php 
-        $prev = get_previous_post();
-        $next = get_next_post();
-        ?>
-        
-            <a href="<?php echo get_permalink($prev); ?>" class="prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-gauche.png" alt="Précédente">
-            </a>
-        
-        
-            <a href="<?php echo get_permalink($next); ?>" class="next">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-droite.png" alt="Suivante">
-            </a>
-        
-    </div>
-    <div class="image-navigation-photo">
-      <?php if ( has_post_thumbnail() ) : ?>
-        <?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
-      <?php endif; ?>
+    <div class="bloc-photo-fleche-nav">
+      <div class="fleches-navigation-photos">
+          <?php 
+          $prev = get_previous_post();
+          $next = get_next_post();
+          ?>
+          
+              <a href="<?php echo get_permalink($prev); ?>" class="prev">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-gauche.png" alt="Précédente">
+              </a>
+          
+          
+              <a href="<?php echo get_permalink($next); ?>" class="next">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-droite.png" alt="Suivante">
+              </a>
+      </div>
+    
+      <div class="image-navigation-photo">
+        <?php if ( has_post_thumbnail() ) : ?>
+          <?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 </div>

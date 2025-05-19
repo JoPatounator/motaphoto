@@ -94,6 +94,33 @@ text-transform: uppercase;
 }
 
 
+//Style label fleches de nav de la Lightbox
+.lightbox-label {
+    color: $couleur-blanc;
+    font-family: $font-spacemono;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    vertical-align: middle;
+  }
+
+//Style affichage metadonnées Lightbox
+
+.lightbox-meta {
+    color:$couleur-blanc;
+    font-family: $font-poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0em;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+
+
 
 
 

@@ -27,6 +27,32 @@
 
 <!-- Scripts JavaScript -->
 <?php wp_footer(); ?>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox hidden">
+  <div class="lightbox-overlay"></div>
+    <button class="lightbox-nav lightbox-prev" aria-label="Photo précédente">
+        <span class="lightbox-label">Précédente</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-gauche-white.png" alt="Précédente"> 
+    </button>
+
+    <button class="lightbox-nav lightbox-next" aria-label="Photo suivante">
+        <span class="lightbox-label">Suivante</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fleche-droite-white.png" alt="Suivante">
+    </button>
+
+    <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="Photo en plein écran">
+        <button id="lightbox-close" aria-label="Fermer la lightbox">✕</button>
+    </div>
+
+    <div class="lightbox-meta">
+        <p id="lightbox-ref">Référence: xxx</p>
+        <p id="lightbox-cat">Catégorie: </p>
+    </div>
+
+</div>
+
 </body>
 
 </html>

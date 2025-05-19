@@ -113,6 +113,28 @@ h3 {
   vertical-align: middle;
 }
 
+.lightbox-label {
+  color: #ffffff;
+  font-family: "SpaceMono", monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0em;
+  vertical-align: middle;
+}
+
+.lightbox-meta {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0em;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .home {
   max-width: 1440px;
   margin: 0 auto;
@@ -221,8 +243,9 @@ h3 {
   width: 1440px;
 }
 .hero-header-image img {
-  max-width: 100%;
-  height: auto;
+  max-width: 1440px;
+  width: 1440px;
+  height: 962px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -484,12 +507,16 @@ h3 {
   }
 }*/
 .navigation-bouton-photo {
-  width: 60.8vw;
+  width: 1130px;
+  max-width: 1130px;
   height: 12.8vh;
   display: flex;
+  flex: 1;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  gap: 20px;
   border-bottom: solid 1px;
 }
 .navigation-bouton-photo .container-navigation-bouton-photo {
@@ -522,11 +549,7 @@ h3 {
   margin-left: 21px;
 }
 .navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit {
-  margin-top: -11px;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
 }
 .navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos {
   display: flex;
@@ -539,6 +562,11 @@ h3 {
 }
 .navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos a {
   text-decoration: none;
+}
+.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .bloc-photo-fleche-nav {
+  margin: 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .image-navigation-photo {
   margin-bottom: 6px;
@@ -578,4 +606,130 @@ h3 {
   height: 495px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.bloc-photo-liste {
+  position: relative;
+}
+.bloc-photo-liste .photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bloc-photo-liste:hover .photo-hover {
+  opacity: 1;
+}
+.bloc-photo-liste .icon-eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bloc-photo-liste .icon-fullscreen {
+  position: absolute;
+  top: 21px;
+  left: 512px;
+}
+.bloc-photo-liste .photo-hover img {
+  width: 32px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.bloc-photo-liste .photo-hover img:hover {
+  transform: scale(1.1);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox.hidden {
+  display: none;
+}
+.lightbox .lightbox-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.lightbox .lightbox-content {
+  position: relative;
+  z-index: 1001;
+  width: 1024px;
+  height: 815px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.lightbox .lightbox-content img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+}
+.lightbox .lightbox-content #lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lightbox-nav img {
+  width: 25px;
+}
+
+.lightbox-prev {
+  left: 24px;
+  flex-direction: row-reverse;
+}
+
+.lightbox-next {
+  right: 24px;
+  flex-direction: row;
+}
+
+.lightbox-meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1024px;
+  position: absolute;
+  bottom: 93px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.lightbox-meta #lightbox-ref,
+.lightbox-meta #lightbox-cat {
+  margin: 0;
 }/*# sourceMappingURL=main-style.css.map */
