@@ -1,103 +1,98 @@
- // Bloc bas : contact et navigation
 .navigation-bouton-photo {
-        width: 1130px;
-        max-width: 1130px;
-        height: 12.8vh;
-        display: flex;
-        flex:1;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        gap: 20px;
-        border-bottom: solid 1px;
+  width: 100%;
+  max-width: 1130px;
+  margin: -0.4vh auto 0 auto;
+  padding: 0vh 0vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  border-bottom: 1px solid black; // 🔧 filet noir 1px
 
+  .container-navigation-bouton-photo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3vh;
+  }
 
+  .bloc-interaction-gauche {
+    display: flex;
+    gap: 5.8vw;
+    align-items: center;
+    margin-top: 1.7vh;
 
+    .question-contact-bouton {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 0vw;
 
-      
-        
-        
+      p {
+        margin: 0;
+      }
+    }
 
-        
-       
-        
-        
+    .contact-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
+      #bouton-photo {
+        width: 25vw;
+        max-width: 281px;
+        height: 50px;
+        margin-left: -1vw;
+        transition: transform 0.3s ease;
 
-        .container-navigation-bouton-photo{
-            width: 100vw;
-            height: 17.8vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
 
-            .bloc-interaction-gauche{
-                margin:0px;
-                display:flex;
-                gap:107px;
-                
+  .bloc-interaction-droit {
+    display: flex;
+    align-items: center;
+    margin-right: -1.0vw; // alignement droit miniature navigation
 
-                .contact-button{
-                    display:flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    margin:0px;
+    .bloc-photo-fleche-nav {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
 
-                    #bouton-photo{
-                        width:281px;
-                        height:50px;
-                        margin-left:-15px;
-                    }
-                }
+    .fleches-navigation-photos {
+      display: flex;
+      gap: 25px;
 
-                .question-contact-bouton{
-                    display:flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    margin-left: 21px;
-                }
+      a {
+        text-decoration: none;
+        margin-top: 0.5vh;
 
-            }
+        img {
+          width: 28px; // taille fleches nav miniature .
+          height: auto;
+          transition: transform 0.3s ease;
 
-            .bloc-interaction-droit{
-                //margin-top: -11px;
-                display: flex;
-                //flex-direction: column-reverse;
-                //align-items: center;
-                //justify-content: center;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
 
-                .fleches-navigation-photos{
-                    display: flex;
-                    flex-direction: row;
-                    gap: 30px;
-                    .navigation-photos .prev:hover,
-                :hover {
-                    //background-color: #f0f0f0; /* Couleur légèrement plus claire au survol */
-                    transform: scale(1.1); /* Effet de zoom au survol */
-                    }
+    .image-navigation-photo {
+      margin-top: 8px;
 
-                    a{
-                        text-decoration: none;
-                    }
-                }
-
-                .bloc-photo-fleche-nav{
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column-reverse;
-                }
-
-                .image-navigation-photo{
-                    margin-bottom: 6px;
-
-                    img{
-                        width:81px;
-                        height:71px;
-                    }
-                }
-            }
-        }     
+      img {
+        width: 81px;
+        height: 71px;
+        object-fit: cover;
+        //border-radius: 0px;
+      }
+    }
+  }
 }
- 

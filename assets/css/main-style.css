@@ -507,73 +507,87 @@ h3 {
   }
 }*/
 .navigation-bouton-photo {
-  width: 1130px;
+  width: 100%;
   max-width: 1130px;
-  height: 12.8vh;
+  margin: -0.4vh auto 0 auto;
+  padding: 0vh 0vw;
   display: flex;
-  flex: 1;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  gap: 20px;
-  border-bottom: solid 1px;
+  gap: 2vw;
+  border-bottom: 1px solid black;
 }
 .navigation-bouton-photo .container-navigation-bouton-photo {
-  width: 100vw;
-  height: 17.8vh;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3vh;
 }
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-gauche {
-  margin: 0px;
+.navigation-bouton-photo .bloc-interaction-gauche {
   display: flex;
-  gap: 107px;
+  gap: 5.8vw;
+  align-items: center;
+  margin-top: 1.7vh;
 }
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-gauche .contact-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0px;
-}
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-gauche .contact-button #bouton-photo {
-  width: 281px;
-  height: 50px;
-  margin-left: -15px;
-}
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-gauche .question-contact-bouton {
+.navigation-bouton-photo .bloc-interaction-gauche .question-contact-bouton {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 21px;
+  margin-left: 0vw;
 }
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit {
-  display: flex;
-}
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-}
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos .navigation-photos .prev:hover,
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos :hover {
-  transform: scale(1.1); /* Effet de zoom au survol */
-}
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos a {
-  text-decoration: none;
-}
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .bloc-photo-fleche-nav {
+.navigation-bouton-photo .bloc-interaction-gauche .question-contact-bouton p {
   margin: 0;
+}
+.navigation-bouton-photo .bloc-interaction-gauche .contact-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navigation-bouton-photo .bloc-interaction-gauche .contact-button #bouton-photo {
+  width: 25vw;
+  max-width: 281px;
+  height: 50px;
+  margin-left: -1vw;
+  transition: transform 0.3s ease;
+}
+.navigation-bouton-photo .bloc-interaction-gauche .contact-button #bouton-photo:hover {
+  transform: scale(1.05);
+}
+.navigation-bouton-photo .bloc-interaction-droit {
+  display: flex;
+  align-items: center;
+  margin-right: -1vw;
+}
+.navigation-bouton-photo .bloc-interaction-droit .bloc-photo-fleche-nav {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .image-navigation-photo {
-  margin-bottom: 6px;
+.navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos {
+  display: flex;
+  gap: 25px;
 }
-.navigation-bouton-photo .container-navigation-bouton-photo .bloc-interaction-droit .image-navigation-photo img {
+.navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos a {
+  text-decoration: none;
+  margin-top: 0.5vh;
+}
+.navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos a img {
+  width: 28px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.navigation-bouton-photo .bloc-interaction-droit .fleches-navigation-photos a img:hover {
+  transform: scale(1.1);
+}
+.navigation-bouton-photo .bloc-interaction-droit .image-navigation-photo {
+  margin-top: 8px;
+}
+.navigation-bouton-photo .bloc-interaction-droit .image-navigation-photo img {
   width: 81px;
   height: 71px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .photos-apparentees {
@@ -708,9 +722,9 @@ h3 {
   margin: 0;
 }
 .lightbox .lightbox-content #lightbox-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: fixed;
+  top: 80px;
+  right: 90px;
   background: transparent;
   border: none;
   color: #ffffff;

@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Sécurité supplémentaire
     refText.textContent = photo.ref
-      ? "REF. " + photo.ref
-      : "REF. non défini";
+      ? "Référence: " + photo.ref
+      : "Référence non défini";
 
-    catText.textContent = photo.cat || "non définie";
+    catText.textContent = "Catégorie: " + photo.cat || "non définie";
     lightbox.classList.remove("hidden");
   }, 50);
 }

@@ -51,7 +51,9 @@
             </div>
         </div>
 
-        <button id="lightbox-close" aria-label="Fermer la lightbox">✕</button>
+        <button id="lightbox-close" aria-label="Fermer la lightbox">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fermeture-croix-lightbox.png" alt="fermeture lightbox">
+        </button>
     </div>
 
 
