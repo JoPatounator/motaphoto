@@ -10,7 +10,7 @@
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 20px;
     justify-items: center;
   }
   
@@ -75,14 +75,28 @@
     }
   }
 
-  .photo-grid .bloc-photo-liste {
+ /* .photo-grid .bloc-photo-liste {
   display: none;
 }
 
 .photo-grid .bloc-photo-liste:nth-child(1),
 .photo-grid .bloc-photo-liste:nth-child(2) {
   display: block;
+}*/
+
+
+
+.photos-apparentees {
+  .photo-grid .bloc-photo-liste {
+    display: none;
+  }
+
+  .photo-grid .bloc-photo-liste:nth-child(1),
+  .photo-grid .bloc-photo-liste:nth-child(2) {
+    display: block;
+  }
 }
+
 
   
   

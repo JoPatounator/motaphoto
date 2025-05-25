@@ -113,6 +113,15 @@ h3 {
   vertical-align: middle;
 }
 
+.bouton-charger-plus {
+  font-family: "SpaceMono", monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0em;
+  vertical-align: middle;
+}
+
 .lightbox-label {
   color: #ffffff;
   font-family: "SpaceMono", monospace;
@@ -133,6 +142,14 @@ h3 {
   letter-spacing: 0em;
   vertical-align: middle;
   text-transform: uppercase;
+}
+
+.filtre-select,
+.filtre-select-formats {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .home {
@@ -248,6 +265,16 @@ h3 {
   height: 962px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.bouton-charger-plus {
+  width: 19vw;
+  max-width: 272px;
+  height: 5.3vh;
+  margin-left: 0vw;
+  margin-top: 5.4vh;
+  margin-bottom: 5.3vh;
+  transition: transform 0.3s ease;
 }
 
 .site-footer {
@@ -415,7 +442,6 @@ h3 {
     transform: translateY(0);
   }
 }
-/* Adaptation desktop */
 .single-photo {
   max-width: 1440px;
   margin: 0 auto;
@@ -601,7 +627,7 @@ h3 {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
   justify-items: center;
 }
 
@@ -658,12 +684,19 @@ h3 {
   transform: scale(1.1);
 }
 
-.photo-grid .bloc-photo-liste {
+/* .photo-grid .bloc-photo-liste {
   display: none;
 }
 
 .photo-grid .bloc-photo-liste:nth-child(1),
 .photo-grid .bloc-photo-liste:nth-child(2) {
+  display: block;
+}*/
+.photos-apparentees .photo-grid .bloc-photo-liste {
+  display: none;
+}
+.photos-apparentees .photo-grid .bloc-photo-liste:nth-child(1),
+.photos-apparentees .photo-grid .bloc-photo-liste:nth-child(2) {
   display: block;
 }
 
@@ -753,4 +786,95 @@ h3 {
 .lightbox .lightbox-next {
   right: 24px;
   flex-direction: row;
+}
+
+#filtre-photo-form {
+  display: flex;
+  width: 1150px;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+#filtre-photo-form .filtre-select {
+  width: 260px;
+  height: 42px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../../assets/images/Icon-down.png");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 12px;
+  padding: 11px 18px;
+  border: 1.3px solid #B8BBC2;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#filtre-photo-form .filtre-select:focus {
+  outline: none;
+  border-color: #C4C4C4;
+}
+#filtre-photo-form .filtre-select-formats {
+  width: 260px;
+  height: 42px;
+  margin-left: -15.6vw;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../../assets/images/Icon-down.png");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 12px;
+  padding: 11px 18px;
+  border: 1.3px solid #B8BBC2;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#filtre-photo-form .filtre-select-formats:focus {
+  outline: none;
+  border-color: #C4C4C4;
+}
+
+.catalogue-photo .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 564px);
+  gap: 20px;
+  justify-content: center;
+}
+.catalogue-photo .photo-grid .bloc-photo-liste {
+  display: block;
+  width: 100%;
+}
+.catalogue-photo .photo-grid .bloc-photo-liste:hover .photo-hover {
+  opacity: 1;
+}
+.catalogue-photo .photo-grid .bloc-photo-liste .icon-eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.catalogue-photo .photo-grid .bloc-photo-liste .icon-fullscreen {
+  position: absolute;
+  top: 21px;
+  left: 512px;
+}
+.catalogue-photo .photo-grid .bloc-photo-liste .photo-hover img {
+  width: 32px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.catalogue-photo .photo-grid .bloc-photo-liste .photo-hover img:hover {
+  transform: scale(1.1);
+}
+.catalogue-photo .photo-grid .bloc-photo-liste img {
+  width: 100%;
+  height: 495px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main-style.css.map */

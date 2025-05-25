@@ -1,4 +1,4 @@
-/* Adaptation desktop */
+
 
 .single-photo{
     max-width: 1440px;
@@ -14,7 +14,7 @@
 
 
     .article-photo{
-        flex: 1;                     // L'article prend toute la hauteur restante
+        flex: 1;                     // article prend toute la hauteur restante
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,21 +26,21 @@
         width: 1130px;
         flex: 1;
         display: flex;
-        //flex-wrap: wrap; // Permet au contenu de se répartir proprement sur plusieurs lignes en cas de besoin
+        //flex-wrap: wrap;
         justify-content: space-between;
         max-width: 1130px;
         margin: 0 auto;
         gap: 20px;
 
         .infos-contenu-photo{
-            flex: 0 0 50%; // Chaque section occupe 50% de la largeur
+            flex: 0 0 50%; // Une section occupe 50% de la largeur
             max-width: 50%;
             border-bottom: 1px solid black;
             margin-bottom: 4px;
         }
 
         .image-contenu-photo {
-        flex: 0 0 50%; // Chaque section occupe 50% de la largeur
+        flex: 0 0 50%; // Une section occupe 50% de la largeur
         max-width: 50%;
 
         .img{
@@ -81,9 +81,9 @@
             flex-direction: column;
           
             a {
-              text-decoration: none; // Enlève le soulignement
-              color: inherit;        // Hérite de la couleur du parent
-              pointer-events: none;  // Désactive l'interaction au clic (optionnel)
+              text-decoration: none; 
+              color: inherit;        
+              pointer-events: none;  
             }
           }
           

@@ -93,6 +93,15 @@ text-transform: uppercase;
 
 }
 
+.bouton-charger-plus{
+    font-family: $font-spacemono;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0em;
+    vertical-align: middle;
+}
+
 
 //Style label fleches de nav de la Lightbox
 .lightbox-label {
@@ -119,6 +128,15 @@ text-transform: uppercase;
     text-transform: uppercase;
 }
 
+
+//Style des selecteurs de filtres
+.filtre-select,
+.filtre-select-formats{
+    font-family: $font-poppins;
+    font-size: 14px;
+    color: $couleur-noir;
+    background-color:$couleur-blanc;
+}
 
 
 
