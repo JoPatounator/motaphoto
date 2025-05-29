@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mise à jour
     lightboxImg.src = photo.img;
+
+
     refText.textContent = photo.ref
       ? "Référence: " + photo.ref
       : "Référence non définie";

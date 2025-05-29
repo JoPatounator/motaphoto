@@ -1,56 +1,78 @@
 
-
-#filtre-photo-form{
-  display:flex;
-  width: 1150px;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-top:35px;
-  margin-bottom: 40px;
-
-.filtre-select {
-  width: 260px;
-  height: 42px;
-  appearance: none; // masque la flèche native
-  background-image: url('../../assets/images/Icon-down.png'); // chemin relatif
-  background-repeat: no-repeat;
-  background-position: right 18px center;
-  background-size: 12px; // ajuste à la taille souhaitée
-  padding: 11px 18px; // haut/bas = 11px, droite/gauche = 18px
-  border: 1.3px solid $couleur-gris-clair; 
-  border-radius: 8px;
+.filtres-catalogue {
+  width: 100%;
+  max-width: 1148px;
+  margin: 0 auto;
+  //padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 
+
+  #filtre-photo-form{
+    display:flex;
+    max-width: 1150px;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    //padding: 0 20px;
+    margin-left:auto;
+    margin-top:80px;
+    margin-bottom: 40px;
+
+
+    
+  
+  
   
 
+    .filtre-select {
+      width: 260px;
+      height: 42px;
+      appearance: none; // masque la flèche native
+      background-image: url('../../assets/images/Icon-down.png'); // chemin relatif
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      background-size: 12px; // ajuste à la taille souhaitée
+      padding: 11px 18px; // haut/bas = 11px, droite/gauche = 18px
+      border: 1.3px solid $couleur-gris-clair; 
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  &:focus {
-    outline: none;
-    border-color: $couleur-gris-fonce; 
-  }
-}
+      
 
-.filtre-select-formats{
-    width: 260px;
-    height: 42px;
-    margin-left: -15.6vw;
-    appearance: none; // masque la flèche native
-    background-image: url('../../assets/images/Icon-down.png'); // chemin relatif
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    background-size: 12px; // ajuste à la taille souhaitée
-    padding: 11px 18px; // haut/bas = 11px, droite/gauche = 18px
-    border: 1.3px solid $couleur-gris-clair; 
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    &:focus {
-    outline: none;
-    border-color: $couleur-gris-fonce; 
+      &:focus {
+        outline: none;
+        border-color: $couleur-gris-fonce; 
+      }
+    }
+
+    .filtre-select-formats{
+        width: 260px;
+        height: 42px;
+        margin-left: -15.6vw;
+        appearance: none; // masque la flèche native
+        background-image: url('../../assets/images/Icon-down.png'); // chemin relatif
+        background-repeat: no-repeat;
+        background-position: right 18px center;
+        background-size: 12px; // ajuste à la taille souhaitée
+        padding: 11px 18px; // haut/bas = 11px, droite/gauche = 18px
+        border: 1.3px solid $couleur-gris-clair; 
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:focus {
+        outline: none;
+        border-color: $couleur-gris-fonce; 
+      }
+      }
   }
-  }
+
+
 }

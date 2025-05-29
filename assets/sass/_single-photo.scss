@@ -23,12 +23,12 @@
   
 
     .bloc-info-image {
-        width: 1130px;
+        width: 1148px;
         flex: 1;
         display: flex;
         //flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 1130px;
+        max-width: 1148px;
         margin: 0 auto;
         gap: 20px;
 
@@ -60,7 +60,7 @@
 
     .photo-info-container{
         //width: 420px;
-        width: 22vw;
+        width: 100%;
         height: 100%;
         display:flex;
         align-content: center;
@@ -68,6 +68,7 @@
         justify-content: flex-end;
         flex-wrap: wrap;
         margin-top: -20px;
+        padding: 0 20px;
 
         .photo-title{
             margin-top: 0px;

@@ -8,19 +8,27 @@
 
   
   .photo-grid {
+    width:100%;
+    max-width:1148px;
+    margin:0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-items: center;
+    //padding: 0 20px 0 20px;
+    box-sizing: border-box;
   }
+
   
-  @media (max-width: 768px) {
+  /*@media (max-width: 768px) {
     .photo-grid {
       grid-template-columns: 1fr;
     }
-  }
+  }*/
   
   .bloc-photo-liste {
+    display:flex;
+    justify-content: center;
     width: 100%;
     overflow: hidden;
     //border-radius: 8px;
@@ -60,8 +68,8 @@
   
     .icon-fullscreen {
       position: absolute;
-      top: 21px;
-      left: 512px;
+      top: 6%;
+      left: 88%;
     }
   
     .photo-hover img {

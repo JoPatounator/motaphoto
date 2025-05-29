@@ -1,7 +1,6 @@
 .lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -18,13 +17,14 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
   }
 
   .lightbox-content {
     position: relative;
-    z-index: 1001;
-    width: 1024px;
-    max-width: 100%;
+    z-index: 2;
+    max-width: 1024px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@
     .lightbox-inner {
       display: flex;
       flex-direction: column;
-      align-items: stretch;
+      align-items: center;
 
       img {
         max-width: 100%;
@@ -45,6 +45,7 @@
       .lightbox-meta {
         display: flex;
         justify-content: space-between;
+        width: 100%;
         padding: 8px 12px 0;
         color: $couleur-blanc;
         font-family: $font-poppins;
@@ -58,41 +59,45 @@
     }
 
     #lightbox-close {
-      position: fixed;
-      top: 80px;
-      right: 90px;
+      position: absolute;
+      top: 10px;
+      right: -100px;
       background: transparent;
       border: none;
-      color: $couleur-blanc;
+      color: white;
       font-size: 2rem;
       cursor: pointer;
+      z-index: 3;
     }
   }
 
   .lightbox-nav {
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
     border: none;
+    color: white;
+    font-family: $font-spacemono;
+    font-size: 14px;
     cursor: pointer;
-    z-index: 1002;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    z-index: 2;
 
     img {
-      width: 25px;
+      width: 24px;
     }
-  }
 
-  .lightbox-prev {
-    left: 24px;
-    flex-direction: row-reverse; 
-  }
+    &.lightbox-prev {
+      left: calc(50% - 660px - 30px); // 512px = moitié de 1024px (taille img)
+      flex-direction: row-reverse;
+    }
 
-  .lightbox-next {
-    right: 24px;
-    flex-direction: row;
+    &.lightbox-next {
+      right: calc(50% - 660px - 30px);
+      flex-direction: row;
+    }
   }
 }

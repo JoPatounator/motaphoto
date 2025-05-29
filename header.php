@@ -32,11 +32,7 @@
 
             <!-- Titre Herader -->
             <!-- Dans header.php -->
-            <div class="header-title-container">
-                <?php if ( is_front_page() || is_home() ) : ?>
-                    <h1 class="header-title">PHOTOGRAPHE EVENT</h1>
-                <?php endif; ?>
-            </div>
+            
         
 
             <!-- Menu de navigation -->
