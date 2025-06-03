@@ -9,9 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const prevBtn = document.querySelector(".lightbox-prev");
   const nextBtn = document.querySelector(".lightbox-next");
+  const navPrev = document.querySelector(".lightbox-prev");
+  const navNext = document.querySelector(".lightbox-next");
+  const navContainer = document.createElement("div");
+  navContainer.classList.add("lightbox-nav-bottom");
 
   // Variables globales
-  window.galleryPhotos = []; // Stockera les photos à afficher
+  window.galleryPhotos = []; // Tab qui contiendra les photos a afficher
   window.currentIndex = 0;   // Index de la photo active
 
   // Fonction pour afficher la photo dans la lightbox
@@ -30,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mise à jour
     lightboxImg.src = photo.img;
 
-
     refText.textContent = photo.ref
       ? "Référence: " + photo.ref
       : "Référence non définie";
@@ -40,9 +43,43 @@ document.addEventListener("DOMContentLoaded", function () {
       : "Catégorie non définie";
 
     lightbox.classList.remove("hidden");
+
+    // Réorganisation des flèches si écran < 1440px
+    const navPrev = document.querySelector(".lightbox-prev");
+    const navNext = document.querySelector(".lightbox-next");
+    const metaZone = document.querySelector(".lightbox-meta");
+
+    if (window.innerWidth < 1440) {
+      let navContainer = document.querySelector(".lightbox-nav-bottom");
+
+      // Création du conteneur si absent
+      if (!navContainer) {
+        navContainer = document.createElement("div");
+        navContainer.classList.add("lightbox-nav-bottom");
+        metaZone.parentNode.appendChild(navContainer);
+      }
+
+      // On déplace les boutons dans ce conteneur
+      navContainer.innerHTML = ""; // reset
+      navContainer.appendChild(navPrev);
+      navContainer.appendChild(navNext);
+    } else {
+      //  Replacer dans .lightbox pour un ciblage CSS correct
+      const lightbox = document.getElementById("lightbox");
+      lightbox.appendChild(navPrev);
+      lightbox.appendChild(navNext);
+
+      //  Supprime le conteneur mobile s’il existe encore
+      const navContainer = document.querySelector(".lightbox-nav-bottom");
+      if (navContainer) navContainer.remove();
+    }
+
+
+
+    adjustNavPosition();
   }
 
-  // Fonction globale pour attacher les événements aux .icon-fullscreen (réutilisable après AJAX)
+  // Fonction globale pour attacher les événements aux .icon-fullscreen
   window.initLightbox = function () {
     window.galleryPhotos = [];
     const fullscreenLinks = document.querySelectorAll(".icon-fullscreen");
@@ -60,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       link.addEventListener("click", function (e) {
         e.preventDefault();
-        e.stopPropagation(); // Empêche la fermeture accidentelle
+        e.stopPropagation();
         window.currentIndex = index;
         updateLightbox(index);
       });
@@ -99,6 +136,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 🔁 Appel initial au chargement de la page
+  // Fonction de repositionnement responsive
+  function adjustNavPosition() {
+    if (window.innerWidth < 1440) {
+      // Déplacer les boutons dans un bloc en bas
+      if (!document.querySelector(".lightbox-nav-bottom")) {
+        navContainer.appendChild(navPrev);
+        navContainer.appendChild(navNext);
+        document.querySelector(".lightbox-inner").appendChild(navContainer);
+      }
+    } else {
+      // Remettre les boutons à leur place initiale si besoin (refresh ou agrandissement)
+      if (document.querySelector(".lightbox-nav-bottom")) {
+        document.querySelector(".lightbox").appendChild(navPrev);
+        document.querySelector(".lightbox").appendChild(navNext);
+        navContainer.remove();
+      }
+    }
+  }
+
+  window.addEventListener("resize", adjustNavPosition);
+
+  // Appel initial au chargement de la page
   window.initLightbox();
 });

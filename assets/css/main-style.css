@@ -751,6 +751,7 @@ h3 {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  margin: 0 auto;
 }
 .lightbox.hidden {
   display: none;
@@ -761,6 +762,7 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
+  padding: 0 20px;
 }
 .lightbox .lightbox-content {
   position: relative;
@@ -808,7 +810,8 @@ h3 {
   cursor: pointer;
   z-index: 3;
 }
-.lightbox .lightbox-nav {
+
+.lightbox-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -823,15 +826,10 @@ h3 {
   gap: 8px;
   z-index: 2;
 }
-.lightbox .lightbox-nav img {
-  width: 24px;
-}
-.lightbox .lightbox-nav.lightbox-prev {
-  left: calc(50% - 660px - 30px);
+.lightbox-nav.lightbox-prev {
   flex-direction: row-reverse;
 }
-.lightbox .lightbox-nav.lightbox-next {
-  right: calc(50% - 660px - 30px);
+.lightbox-nav.lightbox-next {
   flex-direction: row;
 }
 
@@ -968,6 +966,65 @@ h3 {
   transform: scale(1.1);
 }
 
+@media (min-width: 1440px) {
+  .lightbox .lightbox-prev {
+    left: calc(50% - 660px - 30px);
+    flex-direction: row-reverse;
+  }
+  .lightbox .lightbox-next {
+    right: calc(50% - 660px - 30px);
+    flex-direction: row;
+  }
+}
+@media (max-width: 1439px) {
+  .lightbox {
+    position: fixed;
+  }
+  .lightbox .lightbox-label {
+    color: #ffffff;
+    font-family: "SpaceMono", monospace;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    vertical-align: middle;
+    margin-left: 0px;
+  }
+  .lightbox .lightbox-nav {
+    position: relative;
+    top: 45%;
+    transform: none;
+    justify-content: space-between;
+  }
+  .lightbox .lightbox-next {
+    flex-direction: row;
+  }
+  .lightbox .lightbox-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox .lightbox-content #lightbox-close {
+    top: -6%;
+    right: 48%;
+  }
+  .lightbox .lightbox-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-nav-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .lighbox-overlay {
+    position: absolute;
+  }
+}
 @media (max-width: 1199px) {
   .filtres-catalogue {
     padding: 0 20px;
