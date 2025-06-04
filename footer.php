@@ -15,9 +15,9 @@
     <div class="footer-container">
         <!-- Liens du footer -->
         <div class="footer-links">
-            <a href="<?php echo esc_url(get_permalink(get_page_by_title('mentions-legales'))); ?>">Mentions légales</a>
-            <a href="<?php echo esc_url(get_privacy_policy_url('#')); ?>">Vie privée</a>
-            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tous droits réservés'))); ?>">Tous droits réservés</a>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Mentions légales'))); ?>">Mentions légales</a>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Politique de confidentialité'))); ?>">Vie privée</a>
+            <span class="footer-copyright">Tous droits réservés</span>
         </div>
     </div><!-- .footer-container -->
 </footer><!-- #colophon -->

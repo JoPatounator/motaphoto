@@ -223,3 +223,14 @@ function ajax_charger_plus_photos() {
 add_action('wp_ajax_charger_plus_photos', 'ajax_charger_plus_photos');
 add_action('wp_ajax_nopriv_charger_plus_photos', 'ajax_charger_plus_photos');
 
+
+
+function motaphoto_enqueue_custom_scripts() {
+    // Slim Select CSS & JS (depuis CDN)
+    wp_enqueue_style('slimselect-css', 'https://cdn.jsdelivr.net/npm/slim-select@2.8.1/dist/slimselect.min.css');
+    wp_enqueue_script('slimselect-js', 'https://cdn.jsdelivr.net/npm/slim-select@2.8.1/dist/slimselect.min.js', array(), null, true);
+
+    // script d'initialisation slimselect
+    wp_enqueue_script('motaphoto-slimselect', get_template_directory_uri() . '/assets/js/script-slimselect.js', array('slimselect-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'motaphoto_enqueue_custom_scripts');

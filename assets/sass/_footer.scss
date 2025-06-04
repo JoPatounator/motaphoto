@@ -17,7 +17,7 @@
     gap: $spacing-small;
 }
 
-.footer-links {
+.footer-links, .footer-copyright {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
