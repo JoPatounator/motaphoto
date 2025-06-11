@@ -95,7 +95,7 @@ function motaphoto_hero_header() {
         }
         wp_reset_postdata();
     } else {
-        $hero_image = get_template_directory_uri() . '/assets/images/hero-header.jpeg';
+        $hero_image = get_template_directory_uri() . 'assets/images/hero-header.jpeg';
     }
 
     set_query_var('hero_image', $hero_image);
@@ -232,5 +232,8 @@ function motaphoto_enqueue_custom_scripts() {
 
     // script d'initialisation slimselect
     wp_enqueue_script('motaphoto-slimselect', get_template_directory_uri() . '/assets/js/script-slimselect.js', array('slimselect-js'), null, true);
+
+    // Menu Burger javascript
+     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/script-burger.js', [], false, true);
 }
 add_action('wp_enqueue_scripts', 'motaphoto_enqueue_custom_scripts');

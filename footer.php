@@ -50,9 +50,6 @@
 
     <!-- Flèches de navigation placées ici -->
     <div class="nav-blocs">
-      
-
-      
     </div>
 
     <button id="lightbox-close" aria-label="Fermer la lightbox">

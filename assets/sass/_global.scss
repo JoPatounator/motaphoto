@@ -5,3 +5,8 @@
     padding:0;
     background-color: $header-color-bkg; 
 }
+
+// Menu mobile caché par défaut en desktop
+.mobile-nav-container {
+  display: none;
+}

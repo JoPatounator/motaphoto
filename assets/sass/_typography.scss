@@ -152,6 +152,64 @@ text-transform: uppercase;
 }
 
 
+//Style menu burger
+.mobile-navigation {    
+    color: $couleur-blanc;
+    font-family: $font-spacemono;
+    font-size: 44px;
+    text-transform: uppercase;
+
+    a {
+        color: $couleur-blanc;
+        text-decoration: none;
+        font-family: $font-spacemono;
+        font-size: 44px;
+        text-transform: uppercase;
+        list-style: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+
+}
+
+
+//Style bouton envoi formulaire de contact
+
+ #wpcf7-f6-o1 .wpcf7-submit {
+    color: $couleur-noir;
+    font-family: $font-spacemono;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    vertical-align: middle;
+}
+
+
+//Typographie responsive mobile
+// Styles spécifiques pour H2
+@media (max-width: 768px) {
+h2 {
+    font-style: $titre-H2-style-mobile;
+    font-size: $titre-H2-font-size-mobile;
+    font-weight: $titre-H2-weight-mobile;
+    line-height: $titre-H2-line-height-mobile;
+    letter-spacing: $titre-H2-letter-spacing-mobile;
+    vertical-align: $titre-HX-vertical-align;
+}
+
+.meta-item {
+    line-height: 64%;
+}
+}
 
 
 

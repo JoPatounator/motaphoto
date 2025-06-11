@@ -1,0 +1,125 @@
+@media (max-width: 768px) {
+
+    // Masquer le menu desktop sur mobile
+    .desktop-menu {
+        display: none;
+    }
+
+    // Afficher le menu mobile (burger)
+    .mobile-nav-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .burger img,
+    .close-menu img {
+        width: 30px; // ou selon la maquette
+        height: auto;
+        cursor: pointer;
+    }
+
+
+
+    .mobile-navigation {
+        width: 100vw;
+        height: 100vh;
+        position: relative !important;
+        top: 0;
+        left: 0;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        background-color: $couleur-rouge; // rouge vif
+        z-index: 999;
+        padding: 0px;
+        transition: transform 0.3s ease;
+
+        .mobile-menu {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0px;
+            gap: 20px;
+
+
+        }
+
+    }
+
+    .mobile-navigation.hidden {
+        display: none;
+    }
+
+    .burger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            margin: 5px;
+            background-color: $couleur-noir;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .mobile-navigation .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 31px;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: $couleur-blanc;
+        cursor: pointer;
+    }
+
+    .mobile-nav-container .close-menu {
+        display: none;
+        position: static;
+        //top: 20px;
+        //right: 31px;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: $couleur-blanc;
+        cursor: pointer;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 1001;
+    }
+
+    .mobile-nav-container.menu-open .close-menu {
+        display: block;
+    }
+
+    .mobile-nav-container.menu-open .burger {
+        display: none;
+    }
+
+}
+
+
+
+//-----------------------------------------------------------
+
+
+
+
+
+
+//-----------------------------------------------------------
