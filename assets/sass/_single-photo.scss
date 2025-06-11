@@ -40,7 +40,7 @@
         }
 
         .image-contenu-photo {
-        flex: 0 0 50%; // Une section occupe 50% de la largeur
+        flex: 0 0 50%; // Une section ocupe 50% de la largeur
         max-width: 50%;
 
         .img{
@@ -66,7 +66,7 @@
         align-content: center;
         flex-direction: column;
         justify-content: flex-end;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         margin-top: -20px;
         padding: 0 20px;
 
@@ -101,14 +101,3 @@
   
 
 
-  /* Responsive mobile */
-  /*@media (max-width: 768px) {
-    .main-single-photo {
-      grid-template-columns: 1fr;
-    }
-    
-    .photo-image-container img {
-        display:grid;
-        height: auto;
-    }
-  }*/

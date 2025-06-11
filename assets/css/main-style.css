@@ -430,27 +430,6 @@ h3 {
   text-decoration: underline;
 }
 
-/*.footer-copyright {
-    font-size: 0.9rem;
-    color: $couleur-gris-fonce;
-}*/
-/*.footer-navigation-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    background-color: #333;
-}*/
-/*.footer-navigation {
-    text-align: center;
-}*/
-/*.footer-menu li {
-    display: inline-block;
-    margin: 0 10px;
-}*/
-/*.footer-menu a {
-    color: #fff;
-    text-decoration: none;
-}*/
 #wpcf7-f6-o1 {
   width: 275px;
   display: flex;
@@ -612,7 +591,6 @@ h3 {
   align-content: center;
   flex-direction: column;
   justify-content: flex-end;
-  flex-wrap: wrap;
   margin-top: -20px;
   padding: 0 20px;
 }
@@ -639,17 +617,6 @@ h3 {
      object-fit: cover;
 }
 
-/* Responsive mobile */
-/*@media (max-width: 768px) {
-  .main-single-photo {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-image-container img {
-      display:grid;
-      height: auto;
-  }
-}*/
 .navigation-bouton-photo {
   width: 96%;
   max-width: 1130px;
@@ -1314,7 +1281,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1324,7 +1290,6 @@ h3 {
     z-index: 9999;
   }
   .modale-container .modale {
-    top: 13%;
     flex-direction: column;
     height: 71vh;
     padding: 0px;
